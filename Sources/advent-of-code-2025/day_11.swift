@@ -1,5 +1,5 @@
 import Foundation
 
-func solve_day_11() -> (Int, Int) {
+func solve_day_11() async -> (Int, Int) {
     return (0, 0)
 }

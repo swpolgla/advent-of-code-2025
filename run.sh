@@ -1,1 +1,1 @@
-swift run -Xswiftc -strict-concurrency=complete -Xswiftc -O
+swift run -Xswiftc -strict-concurrency=complete -Xswiftc -O -c release

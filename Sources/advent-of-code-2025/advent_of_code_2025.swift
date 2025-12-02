@@ -1,6 +1,5 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
-import Foundation
 import Figlet
 
 @main
@@ -22,8 +21,6 @@ struct advent_of_code_2025 {
         var results: [(Int, Int, Int, ContinuousClock.Instant.Duration)] = []
 
         let clock: ContinuousClock = ContinuousClock()
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
 
         await withTaskGroup(of: (Int, Int, Int, ContinuousClock.Instant.Duration).self) { group in
 
@@ -86,6 +83,6 @@ struct advent_of_code_2025 {
 
     @inlinable
     static func read_input(path: String) -> String {
-        return try! String(contentsOfFile: path, encoding: String.Encoding.ascii)
+        return try! String(contentsOfFile: path, encoding: String.Encoding.ascii).trimmingCharacters(in: .newlines)
     }
 }
